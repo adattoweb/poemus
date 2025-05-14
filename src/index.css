@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+#root{
+    height: 100vh;
+}
+
+.mon {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.mona {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.headitem.active{
+    background-color: rgba(0,0,0,0.7);
+}
+.poemus{
+    background-color: rgba(20,20,20,0.8);
+    color: #fff;
+    backdrop-filter: blur(2px);
+}
+/* .poemus{
+    background-color: rgba(255,255,255,0.8);
+    color: #000;
+    backdrop-filter: blur(2px);
+} */
+.wrapper{
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-image: url("/background.png")
+}
+
+.button {
+    background-image: url("/src/assets/button.png");
+    user-select: none;
+    cursor: pointer;
+}
+.montagu{
+    font-family: "Montagu Slab", serif;
+}
+
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    @apply appearance-none;
+    -moz-appearance: textfield; /* для Firefox */
+  }
+}
+
+@layer utilities {
+    .button {
+        @apply w-[150px] h-[30px] sm:w-[200px] sm:h-[40px] flex justify-center items-center text-black text-[16px] sm:text-[18px] cursor-pointer bg-cover bg-no-repeat
+    }
+
+    .finput{
+        @apply flex w-[230px] sm:w-[270px]
+    }
+
+    .icon {
+      @apply w-[25px] h-[25px] transition-all duration-300 ease-in-out hover:scale-105 xl:w-[30px] xl:h-[30px]
+    }
+    .headitem {
+        @apply rounded-[10px] p-[6px] xl:p-[8px] select-none
+    }
+    .fitem{
+        @apply min-h-max w-[40px] sm:w-[50px] lg:w-[70px] flex justify-center items-center even:bg-[#000000]/10 odd:bg-[#ffffff]/10 cursor-pointer
+    }
+    .fitem:nth-child(3){
+        @apply rounded-r-[15px]
+    }
+    .fitem img{
+        @apply w-[25px] h-[25px] sm:w-[30px] sm:h-[30px] lg:w-[35px] lg:h-[35px] 2xl:w-[40px] 2xl:h-[40px] transition-all duration-300 ease-in-out hover:scale-105
+    }
+    .info__block{
+        @apply flex flex-col gap-[2px]
+    }
+    .info__block h3 {
+        @apply mt-[5px] font-bold text-[16px] sm:text-[18px] lg:text-[20px]
+    }
+    .info__block p{
+        @apply text-[12px] sm:text-[14px] lg:text-[16px]
+    }
+    .history__footer p{
+        @apply flex justify-center items-center py-[2px] px-[8px] rounded-[5px] outline-[3px] outline outline-[#ffffff] cursor-pointer hover:scale-[1.03] text-white
+    }
+    .history__footer p.active{
+        @apply bg-white text-black
+    }
+    .history__footer p:nth-child(1){
+        @apply ml-[30px]
+    }
+    .history__header p{
+        @apply text-[12px] sm:text-[14px] md:text-[15px] whitespace-nowrap 
+    }
+    .myred{
+        @apply outline-red-500
+    }
+    .positem{
+        @apply border-[2px] border-white text-white text-[16px] flex items-center py-[5px] px-[10px] rounded-[5px] h-[40px] cursor-pointer ease-in-out transition-all duration-[0.3s] hover:scale-[1.02]
+    }
+    .positem.active, .mozitem.active{
+        @apply bg-white text-black
+    }
+    .mozitem{
+        @apply border-[2px] border-white text-white text-[16px] flex items-center px-[10px] py-[5px] rounded-[10px] cursor-pointer ease-in-out transition-all duration-[0.3s] hover:scale-[1.02]
+    }
+
+  }
