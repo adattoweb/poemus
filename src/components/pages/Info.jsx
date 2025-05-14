@@ -1,4 +1,5 @@
 import Button from '../ui/Button'
+import { Link } from "react-router";
 
 export default function Info({ isEn }) {
     return (
@@ -33,7 +34,7 @@ export default function Info({ isEn }) {
                 <p><span className="font-bold">{isEn ? 'History' : 'Історія'}</span> – {isEn ? "here you can view poems you've already practiced and restart them if you wish." : 'тут можна переглянути вірші, які вже тренувалися, і перезапустити їх.'}</p>
             </div>
             <div className="m-auto pt-[20px]">
-                <Button href="/">{isEn ? 'Got it' : 'Зрозуміло'}</Button>
+                <Link to="/poemus/"><Button>{isEn ? 'Got it' : 'Зрозуміло'}</Button></Link>
             </div>
         </div>
     )

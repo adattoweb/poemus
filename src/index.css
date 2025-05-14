@@ -88,6 +88,9 @@
     .info__block p{
         @apply text-[12px] sm:text-[14px] lg:text-[16px]
     }
+    .history__footer{
+        @apply w-[90vw] sm:w-[65vw] rounded-[15px] h-[55px] mt-[70px] flex gap-[10px] items-center 
+    }
     .history__footer p{
         @apply flex justify-center items-center py-[2px] px-[8px] rounded-[5px] outline-[3px] outline outline-[#ffffff] cursor-pointer hover:scale-[1.03] text-white
     }
@@ -112,5 +115,4 @@
     .mozitem{
         @apply border-[2px] border-white text-white text-[16px] flex items-center px-[10px] py-[5px] rounded-[10px] cursor-pointer ease-in-out transition-all duration-[0.3s] hover:scale-[1.02]
     }
-
   }

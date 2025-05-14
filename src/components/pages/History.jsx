@@ -43,7 +43,7 @@ export default function History({isEn}){
                 })}
                 {localKeys.length === 0 && <p className="poemus p-[10px] rounded-[5px]">{isEn ? "It's empty here ;(" : "Тут пусто ;("}</p>}
             </div>
-            <div className="history__footer w-[90vw] sm:w-[65vw] poemus rounded-[15px] h-[55px] mt-[70px] flex gap-[10px] items-center">
+            <div className={pages.length === 0 ? "hidden" : "history__footer poemus"}>
                 {pages.map((el, index) => {
                     return <p key={index} className={el === page ? "active" : ""} onClick={() => setPage(el)}>{el}</p>
                 })}

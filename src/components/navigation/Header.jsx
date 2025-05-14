@@ -4,7 +4,7 @@ export default function Header({ isEn, setIsEn }) {
   const location = useLocation()
   const url = location.pathname
   return (
-    <div className="w-[100vw] sm:w-[80vw] poemus px-[10px] sm:px-[15px] sm:rounded-[15px] h-[65px] flex items-center justify-between fixed top-[0px] sm:top-[30px]">
+    <div className="w-[100vw] sm:w-[80vw] poemus px-[10px] sm:px-[15px] absolute sm:rounded-[15px] h-[65px] flex items-center justify-between top-[0px] sm:top-[30px] z-[1]">
       <h1 className="mona font-bold text-[20px] pl-[10px] hidden sm:block">POEMUS</h1>
       <ul className="flex items-center gap-[15px] md:gap-[20px]">
         <li className={url[url.length - 1] === "/" || url[url.length - 1] === "#" ? "headitem active" : "headitem"}><Link to="/poemus/"><img className="icon" src="/poemus/home.png" /></Link></li>

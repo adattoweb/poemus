@@ -16,7 +16,7 @@ export default function TextForm({ isEn, header, name, poem, id, newId, setId, w
 
     const ref = useRef(null)
 
-    const answer = array[newId]
+    const answer = array[newId] ? array[newId].replaceAll(",", "").trim() : undefined
 
     let wordsArray = answer ? [...new Set(answer.split(" ").map(el => el.toLowerCase()))] : []
 
@@ -84,7 +84,7 @@ export default function TextForm({ isEn, header, name, poem, id, newId, setId, w
                 <Form.ButtonProvider>
                     <div className="help montagu bg-[#ffffff] text-[#000000] w-[20px] h-[20px] flex justify-center items-center rounded-[5px] text-[18px] font-bold relative right-[15px] cursor-pointer sm:w-[25px] sm:h-[25px] sm:text-[20px]" onClick={() => { setIsHint(true); views.current++ }}>?</div>
                     <Button onClick={nextAnswer}>{isEn ? "Next" : "Далі"}</Button>
-                    <img src="/remove.png" alt={isEn ? "remove last word" : "видалити останнє слово"} className="w-[25px] h-[25px] invert relative left-[15px] cursor-pointer sm:w-[30px] sm:h-[30px]" onClick={() => {
+                    <img src="remove.png" alt={isEn ? "remove last word" : "видалити останнє слово"} className="w-[25px] h-[25px] invert relative left-[15px] cursor-pointer sm:w-[30px] sm:h-[30px]" onClick={() => {
                         setChoosed(choosed.slice(0, -1))
                         globalChoosed.current = choosed.slice(0, -1)
                     }} />

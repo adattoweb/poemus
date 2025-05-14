@@ -9,7 +9,7 @@ import Button from '../Button'
 export default function TextForm({ isEn, header, name, poem, id, newId, setId, words, timer, returnBack }) {
     const [text, setText] = useState("")
     const [isHint, setIsHint] = useState(false)
-    const array = poem.split("\n")
+    const array = poem.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()"'«»<>…\[\]?!]+/g, "").replace(/\s{2,}/g, " ").split("\n")
     const ref = useRef(null)
 
     useEffect(() => {
@@ -20,7 +20,8 @@ export default function TextForm({ isEn, header, name, poem, id, newId, setId, w
     const errors = useRef(0)
     const passed = useRef(0)
 
-    const answer = array[newId] ? array[newId].trim() : undefined
+    const answer = array[newId] ? array[newId].trim().replaceAll(",", "") : undefined
+    console.log(answer)
 
     function nextAnswer(){
         if(text.trim().toLowerCase() === answer.toLowerCase()){
