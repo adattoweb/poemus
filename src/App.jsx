@@ -18,9 +18,9 @@ export default function App() {
         <Header isEn={isEn} setIsEn={setIsEn}/>
         <div className="flex-grow mt-[150px]">
           <Routes>
-            <Route path="/" element={<Main isEn={isEn}/>} />
-            <Route path="/history" element={<History isEn={isEn}/>} />
-            <Route path="/info" element={<Info isEn={isEn}/>} />
+            <Route path="/poemus/" element={<Main isEn={isEn}/>} />
+            <Route path="/poemus/history" element={<History isEn={isEn}/>} />
+            <Route path="/poemus/info" element={<Info isEn={isEn}/>} />
           </Routes>
         </div>
         <Footer isEn={isEn}/>

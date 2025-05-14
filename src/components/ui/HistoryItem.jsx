@@ -39,11 +39,11 @@ export default function HistoryItem({ isEn, localKey, setRender }){
             <div className="hitem__right flex md:flex-col items-center md:items-end gap-[10px] mt-[10px] md:mt-0">
                 <p className="mona whitespace-nowrap text-[12px] sm:text-[14px] md:text-[16px]">{time}</p>
                 <div className="hitem__menu flex md:flex-col gap-[5px]">
-                    <a href="/"><img className="w-[22px] sm:w-[25px] cursor-pointer" src="/copy.png" alt="Copy poem" onClick={() => {
+                    <a href="/"><img className="w-[22px] sm:w-[25px] cursor-pointer" src="/poemus/copy.png" alt="Copy poem" onClick={() => {
                         localStorage.setItem("poemus-startname", name)
                         localStorage.setItem("poemus-starttext", poem)
                     }}/></a>
-                    <img className="w-[22px] sm:w-[25px] cursor-pointer" src="/deleteImg.png" alt="Delete poem" onClick={() => {
+                    <img className="w-[22px] sm:w-[25px] cursor-pointer" src="/poemus/deleteImg.png" alt="Delete poem" onClick={() => {
                         localStorage.removeItem(localKey)
                         setRender()
                     }} />

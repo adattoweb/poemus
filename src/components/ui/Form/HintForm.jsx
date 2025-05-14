@@ -1,7 +1,7 @@
 import Form from '../Form'
 import Button from '../Button'
 
-export default function HintForm({ words, rightAnswer, onClick }) {
+export default function HintForm({ isEn, words, rightAnswer, onClick }) {
     let newStr = rightAnswer
     if(+words > 0) {
         newStr = rightAnswer.split(" ").slice(0, +words).join(" ")

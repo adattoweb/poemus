@@ -11,8 +11,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className="hidden sm:flex">
-                <a href="https://github.com/adattoweb" className="fitem"><img src="/github.png" alt="github"/></a>
-                <a href="https://t.me/adattoweb" className="fitem"><img src="/telegram.png" alt="telegram"/></a>
+                <a href="https://github.com/adattoweb" className="fitem"><img src="/poemus/github.png" alt="github"/></a>
+                <a href="https://t.me/adattoweb" className="fitem"><img src="/poemus/telegram.png" alt="telegram"/></a>
             </div>
         </div>
     )
