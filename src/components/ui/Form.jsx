@@ -1,8 +1,10 @@
+import { Link } from "react-router";
+
 function ButtonProvider({children, isDisplayInfo}){
     return (
         <div className="flex items-center py-[10px] pb-[20px]">
             {children}
-            {isDisplayInfo && <a href="/info" className="w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] relative left-[20px]"><img src="/info.png" alt="" /></a>}
+            {isDisplayInfo && <Link to="poemus/info" className="w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] relative left-[20px]"><img src="poemus/info.png" alt="" /></Link>}
         </div>
     )
 }
