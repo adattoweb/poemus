@@ -73,5 +73,3 @@
 - **History** — view previously studied poems and reattempt them if needed.
 
 ---
-
-Feel free to improve this README by formatting with icons or adding installation instructions if POEMUS will be public!
